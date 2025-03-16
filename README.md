@@ -83,11 +83,12 @@ Se implementó añadió framework de jacoco en el pom de los dos proyectos para 
 <img width="439" alt="image" src="https://github.com/user-attachments/assets/57132727-ad98-4644-aade-2e2a8e8cf10b" />
 
 10. Ejecutar el Endpoint **BORRAR CLIENTE**:
-    
-12. Ejecutar el Endpoint **OBTENER TODAS LAS CUENTAS**:
+<img width="482" alt="image" src="https://github.com/user-attachments/assets/1f891b24-36e7-49e8-921a-06d5aa15e297" />
+  
+11. Ejecutar el Endpoint **OBTENER TODAS LAS CUENTAS**:
 <img width="482" alt="image" src="https://github.com/user-attachments/assets/d94c424f-bae3-4b02-9b8a-496046264687" />
 
-13. Ejecutar el Endpoint **ACTUALIZAR CUENTA**:
+12. Ejecutar el Endpoint **ACTUALIZAR CUENTA**:
 <img width="490" alt="image" src="https://github.com/user-attachments/assets/e0faedbe-80ca-415e-b4f1-8becf2058eb8" />
 
 ## Ejecución de Pruebas de Rendimiento
