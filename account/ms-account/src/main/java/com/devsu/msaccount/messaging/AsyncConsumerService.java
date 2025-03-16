@@ -34,14 +34,18 @@ public class AsyncConsumerService {
      * @param identification Indica la identificacion a validar
      * @return Retorna la data validada
      */
-    public Map<String, Object> obtenerRespuesta(String identification) throws Exception{
+    public Map<String, Object> obtenerRespuesta(String identification){
         // Esperar hasta que la respuesta esté disponible (con timeout)
         long timeout = 5000; // 5 segundos
         long startTime = System.currentTimeMillis();
 
         while (!respuestas.containsKey(identification)) {
             if (System.currentTimeMillis() - startTime > timeout) {
-                throw new TimeoutException("Timeout esperando respuesta del cliente: " + identification);
+                try {
+                    throw new TimeoutException("Timeout esperando respuesta del cliente: " + identification);
+                }catch(TimeoutException ex){
+                    System.out.println(ex.getMessage());
+                }
             }
             try {
                 Thread.sleep(100);
