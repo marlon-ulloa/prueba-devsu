@@ -10,7 +10,7 @@
 
 ## Instrucciones para ejecutar las pruebas unitarias y de integración
 Las pruebas unitarias se realizaron con la librería de Junit 5, y las pruebas de integhración con Mvc de Spring y Karate DSL.
-Todas las pruebas se ejecutan a través del comando `mvn test` en ambos microservicios. Tomar en cuenta que debe ser la última version de maven 3.9.9 y la versión 21 de jdk de JAVA.
+Todas las pruebas se ejecutan a través del comando `mvn test` en ambos microservicios. Tomar en cuenta que debe ser la última version de maven 3.9.9 y la versión 21 de jdk de JAVA.\
 **Importante: Para la ejecucion de las pruebas es necesario primero levantar todos los contenedores, posterior a ello, en los archivos `application.properties` (ruta: nombremicroservicio/src/main/resources/) de ambos microservicios se debe cambiar en ambos microservicios la línea: `spring.kafka.bootstrap-servers=kafka:9092` por `spring.kafka.bootstrap-servers=localhost:29092`. Adicional, en el mismo archivo, en el microservicio msclient cambiar la línea `spring.datasource.url=jdbc:postgresql://db_cliente:5432/clientedb` por `spring.datasource.url=jdbc:postgresql://localhost:5433/clientedb` y en el microservicio msaccount cambiar la línea `spring.datasource.url=jdbc:postgresql://db_cuenta:5432/cuentadb` por `spring.datasource.url=jdbc:postgresql://localhost:5434/cuentadb`. COn esos cambios se puede conectar a los contenedores el momento de realizar las pruebas**
 Para ejecutar las pruebas de forma individual, es decir, primero las pruebas unitarias y luego las pruebas de integración se deben seguir los siguientes pasos:
 ### Microservicio msclient
@@ -98,9 +98,9 @@ Ingresar en el directorio performancetest y ejecutar el siguiente comando:
     ```
        k6 run --env TEST_TYPE=loadtest performancetest.js
     ```
-Para la variable de entorno TEST_TYPE podemos colocar cualquiera de las siguientes dependiendo del tipo de prueba que deseemos hacer:
+Para la variable de entorno TEST_TYPE podemos colocar cualquiera de las siguientes dependiendo del tipo de prueba que deseemos hacer:\
     ```
-       loadtest
+       loadtest 
        stresstest
        peaktest
        soakingtest
