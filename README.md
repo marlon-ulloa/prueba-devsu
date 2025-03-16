@@ -105,6 +105,8 @@ Para la variable de entorno TEST_TYPE podemos colocar cualquiera de las siguient
        capacitytest
        stabilitytest
     ```
+<img width="1234" alt="image" src="https://github.com/user-attachments/assets/c5c8bf7e-e7e0-418c-838f-5405a019171a" />
+
 
 
    
